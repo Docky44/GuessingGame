@@ -1,5 +1,30 @@
 # GuessingGame
 
+GuessingGame est une application Java ludique où les joueurs doivent deviner un nombre aléatoire 
+choisi par l'ordinateur. Le jeu est simple et interactif, conçu pour être à la fois divertissant 
+et engageant.
+
+# Fonctionnalités principales
+
+- Génération d'un nombre aléatoire :
+Au démarrage du jeu, l'ordinateur génère un nombre aléatoire compris entre 1 et 100.
+
+- Interaction avec le joueur :
+Le joueur est invité à entrer son nom au début du jeu.
+Le joueur doit ensuite deviner le nombre en entrant des suppositions.
+
+- Feedback en temps réel :
+Après chaque tentative, le jeu fournit un retour instantané indiquant si la supposition du joueur est trop basse, trop haute, ou correcte.
+
+- Fin du jeu :
+Le jeu continue jusqu'à ce que le joueur devine correctement le nombre.
+Une fois le nombre deviné, le jeu affiche un message de félicitations et le nombre de tentatives effectuées.
+
+- Enregistrement des scores :
+Les scores des joueurs (nom et nombre de tentatives) sont enregistrés dans une base de données MySQL pour un suivi et une analyse futurs.
+Les informations de connexion à la base de données sont lues depuis un fichier .env pour des raisons de sécurité.
+
+
 
 # Préparer la base de données
 
