@@ -176,3 +176,35 @@ java -cp .;path\to\mysql-connector-java-8.0.29.jar;path\to\dotenv-java-5.2.2.jar
 ```
 
 Remplacez **path\to\ par le chemin réel des fichiers JAR sur votre système.**
+
+
+Explication des tests :
+
+Setup de la base de données (setupDatabase) :
+Avant d'exécuter les tests, cette méthode crée la table Scores si elle n'existe pas déjà.
+
+- Nettoyage de la base de données (clearDatabase) :
+Avant chaque test, cette méthode supprime toutes les entrées de la table Scores pour assurer un état propre pour chaque test.
+
+- Test de la méthode saveScore (testSaveScore) :
+Insère un score pour un joueur de test.
+Vérifie que le score est correctement inséré dans la base de données en effectuant une requête de sélection.
+Utilise des assertions pour vérifier que les données insérées correspondent aux attentes.  
+
+# Compilation :
+
+```
+javac -cp .;path\to\mysql-connector-java-8.0.29.jar;path\to\junit-5.7.1.jar;path\to\hamcrest-core-1.3.jar GuessingGameTest.java
+
+```
+# Exécution :
+
+```
+java -cp .;path\to\mysql-connector-java-8.0.29.jar;path\to\junit-5.7.1.jar;path\to\hamcrest-core-1.3.jar org.junit.jupiter.api.Test GuessingGameTest
+
+```
+
+# Note :
+
+*path\to* doit être remplacé par le chemin réel vers les JARs sur votre système.
+La méthode saveScore dans GuessingGame doit être rendue public pour pouvoir être appelée directement dans les tests, ou vous pouvez déplacer cette méthode dans une classe utilitaire pour la tester plus facilement.
