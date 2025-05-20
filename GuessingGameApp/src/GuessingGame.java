@@ -1,10 +1,12 @@
+import io.github.cdimascio.dotenv.Dotenv;
+
 import java.util.Scanner;
 import java.util.Random;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import io.github.cdimascio.dotenv.Dotenv;
+
 
 public class GuessingGame {
 
@@ -46,7 +48,7 @@ public class GuessingGame {
         System.out.println("Félicitations ! Vous avez deviné le nombre " + numberToGuess + " en " + numberOfTries + " tentatives.");
 
         // Enregistrer le score dans la base de données
-        saveScore(playerName, numberOfTries);
+        //saveScore(playerName, numberOfTries);
 
         scanner.close();
     }
